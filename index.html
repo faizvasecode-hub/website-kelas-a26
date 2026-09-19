@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TPB A26 | Agricultural Engineering</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#030604;--panel:#0b120c;--green:#8cff45;--green2:#21dc72;--orange:#ff6a00;--red:#ff2500;--white:#f3fff0;--muted:#849087;--line:rgba(140,255,69,.18);
+--font-head:"Orbitron","Segoe UI",Tahoma,sans-serif;--font-body:"Poppins","Segoe UI",Tahoma,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:var(--font-body);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:linear-gradient(rgba(140,255,69,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(140,255,69,.035) 1px,transparent 1px);background-size:50px 50px}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 80% 15%,rgba(255,65,0,.09),transparent 24%),radial-gradient(circle at 15% 60%,rgba(50,255,100,.06),transparent 28%)}
+::-webkit-scrollbar{width:7px}::-webkit-scrollbar-thumb{background:linear-gradient(var(--green),var(--orange));border-radius:10px}
+nav{height:70px;position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 6%;background:rgba(2,6,3,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07)}
+.logo{font:900 20px var(--font-head);color:var(--green);letter-spacing:2px}.logo span{color:var(--orange)}
+nav ul{display:flex;gap:25px;list-style:none}nav a{color:#cbd6cd;text-decoration:none;font-size:10px;letter-spacing:1.5px}nav a:hover{color:var(--green)}
+.hero{min-height:100vh;min-height:100svh;padding:110px 7% 70px;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero-copy{width:min(650px,58%);position:relative;z-index:5}
+.badge{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border:1px solid var(--line);border-radius:50px;color:var(--green);font:700 9px var(--font-head);letter-spacing:1.7px;background:rgba(140,255,69,.04)}
+.badge:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 14px var(--green)}
+h1{font:900 clamp(42px,6.5vw,88px)/.94 var(--font-head);letter-spacing:-4px;margin:25px 0}
+h1 .g{color:var(--green);text-shadow:0 0 30px rgba(140,255,69,.2)}h1 .o{color:var(--orange);text-shadow:0 0 30px rgba(255,70,0,.25)}
+.hero-copy p{max-width:650px;color:var(--muted);font-size:14px;line-height:1.9}
+.buttons{display:flex;gap:12px;margin-top:28px}.btn{padding:13px 20px;border-radius:8px;text-decoration:none;font-size:10px;font-weight:700;letter-spacing:1px}.primary{background:var(--green);color:#061006}.secondary{border:1px solid rgba(255,255,255,.13);color:white;background:rgba(255,255,255,.035)}
+.hero-art{position:absolute;right:2%;top:70px;width:48%;height:calc(100% - 70px);min-height:500px;z-index:2;display:grid;place-items:center;pointer-events:none}
+.skull-wrap{width:min(460px,75%);aspect-ratio:1;position:relative;filter:drop-shadow(0 0 35px rgba(255,65,0,.15))}
+.skull{position:absolute;left:50%;top:48%;width:48%;height:48%;transform:translate(-50%,-50%);background:linear-gradient(145deg,#eef7e8,#aeb8ad 55%,#697269);border-radius:46% 46% 40% 40%;box-shadow:inset -18px -20px 35px rgba(0,0,0,.22),0 0 35px rgba(140,255,69,.1);z-index:3}
+.skull:before{content:"";position:absolute;left:50%;bottom:-14%;transform:translateX(-50%);width:72%;height:30%;background:linear-gradient(#bfcabd,#7d887f);border-radius:10px 10px 28px 28px}
+.eye{position:absolute;top:35%;width:22%;height:22%;background:#020302;border-radius:45%;box-shadow:0 0 18px rgba(255,55,0,.75),inset 0 0 9px #ff3500}.eye.left{left:17%;transform:rotate(18deg)}.eye.right{right:17%;transform:rotate(-18deg)}
+.nose{position:absolute;top:57%;left:50%;transform:translateX(-50%);width:0;height:0;border-left:13px solid transparent;border-right:13px solid transparent;border-top:25px solid #050705}
+.teeth{position:absolute;bottom:-7%;left:50%;transform:translateX(-50%);display:flex;gap:4px}.teeth i{display:block;width:13px;height:20px;background:#e5eee0;border-radius:0 0 4px 4px}
+.horn{position:absolute;top:15%;width:18%;height:45%;background:linear-gradient(90deg,#788178,#e1eadc,#697269);clip-path:polygon(50% 0,100% 100%,0 100%);z-index:2}.horn.left{left:12%;transform:rotate(-28deg)}.horn.right{right:12%;transform:rotate(28deg)}
+.fire{position:absolute;inset:0;z-index:1}.fire i{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--orange);box-shadow:0 0 15px var(--red);animation:float 2.5s infinite ease-in-out}.fire i:nth-child(1){left:18%;top:35%;animation-delay:.1s}.fire i:nth-child(2){left:78%;top:30%;animation-delay:.6s}.fire i:nth-child(3){left:30%;top:75%;animation-delay:1s}.fire i:nth-child(4){left:70%;top:70%;animation-delay:1.5s}.fire i:nth-child(5){left:48%;top:12%;animation-delay:.8s}.fire i:nth-child(6){left:88%;top:55%;animation-delay:1.2s}
+@keyframes float{50%{transform:translateY(-25px) scale(1.5);opacity:.35}}
+.ring{position:absolute;inset:5%;border:1px solid rgba(140,255,69,.13);border-radius:50%;animation:spin 18s linear infinite}.ring:after{content:"";position:absolute;top:-4px;left:50%;width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 15px var(--green)}@keyframes spin{to{transform:rotate(360deg)}}
+section{padding:110px 7%;position:relative}.section-head{max-width:730px;margin-bottom:45px}.eyebrow{color:var(--orange);font:700 10px var(--font-head);letter-spacing:4px;margin-bottom:12px}.section-head h2{font:800 clamp(29px,4vw,52px)/1.1 var(--font-head)}.section-head h2 span{color:var(--green)}.section-head p{color:var(--muted);font-size:13px;line-height:1.8;margin-top:14px}
+.identity{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.info{padding:26px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.01));border-radius:15px;min-height:170px;transition:.3s}.info:hover{transform:translateY(-6px);border-color:rgba(140,255,69,.45)}.info .icon{font-size:25px;margin-bottom:17px}.info small{color:var(--muted);font-size:9px;letter-spacing:2px}.info h3{font:700 18px var(--font-head);margin-top:7px}.info p{color:#748077;font-size:11px;margin-top:7px}
+.leaders{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.leader{height:500px;position:relative;border:1px solid rgba(255,255,255,.09);border-radius:19px;overflow:hidden;background:#080d08}.leader-photo{position:absolute;inset:0;display:grid;place-items:center;background:radial-gradient(circle,rgba(140,255,69,.08),transparent 40%),#080d08}.leader-photo:before{content:"\2620";font-size:105px;color:#263128}.leader-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+.upload{position:absolute;right:11px;top:11px;z-index:8;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(140,255,69,.45);background:rgba(0,0,0,.72);color:var(--green);cursor:pointer;font-size:16px}.upload:hover{background:var(--green);color:#061006}
+.leader-info{position:absolute;left:0;right:0;bottom:0;z-index:6;padding:28px;background:linear-gradient(transparent,rgba(2,5,2,.98) 48%)}.role{color:var(--orange);font:700 9px var(--font-head);letter-spacing:2px}.leader h3{font:700 21px var(--font-head);margin-top:8px}.leader-info p{color:var(--muted);font-size:11px;margin-top:5px}
+.toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;gap:15px}.search{width:330px;max-width:100%;padding:13px 16px;color:#fff;font-family:inherit;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1);border-radius:8px;outline:0}.search:focus{border-color:var(--green)}.count{font:700 10px var(--font-head);color:var(--green)}
+.members{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.member{height:340px;position:relative;border:1px solid rgba(255,255,255,.07);border-radius:15px;overflow:hidden;background:#080d08;transition:.3s}.member:hover{transform:translateY(-6px);border-color:rgba(140,255,69,.4)}.member-photo{position:absolute;inset:0;display:grid;place-items:center;background:radial-gradient(circle,rgba(140,255,69,.06),transparent 48%),#0a100b}.member-photo:before{content:"\2620";font-size:62px;color:#253126}.member-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}.member-photo:after{content:"";position:absolute;inset:0;z-index:3;background:linear-gradient(to top,rgba(2,5,2,1),rgba(2,5,2,.02) 68%)}.member .upload{z-index:7}.member-info{position:absolute;z-index:6;left:0;right:0;bottom:0;padding:17px}.num{font:700 8px var(--font-head);color:var(--orange);letter-spacing:1.5px}.member-info h4{font-size:14px;margin-top:5px}.member-info span{color:#7e8b82;font-size:9px;display:block;margin-top:4px}
+.empty{grid-column:1/-1;padding:40px 0;text-align:center;color:var(--muted);font-size:12px}
+footer{padding:70px 7% 30px;text-align:center;border-top:1px solid rgba(255,255,255,.07)}footer strong{font:900 24px var(--font-head);color:var(--green)}footer strong span{color:var(--orange)}footer p{max-width:600px;margin:14px auto;color:#68746b;font-size:11px;line-height:1.8}.copy{margin-top:28px;color:#465047;font:9px var(--font-head);letter-spacing:2px}
+/* animasi reveal: default TAMPIL, baru disembunyikan kalau JS aktif */
+.js .reveal{opacity:0;transform:translateY(22px);transition:.7s}
+.js .reveal.show{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.fire i,.ring{animation:none}}
+@media(max-width:1050px){.hero-copy{width:62%}.hero-art{width:46%;right:-2%}.identity{grid-template-columns:repeat(2,1fr)}.members{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:800px){nav ul{display:none}.hero{min-height:900px;padding-top:105px;align-items:flex-start}.hero-copy{width:100%;text-align:center}.hero-copy p{margin:auto}.buttons{justify-content:center}.hero-art{width:100%;height:430px;top:auto;bottom:0;right:0;opacity:.55}.skull-wrap{width:360px}.leaders{grid-template-columns:1fr}.members{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){section{padding:85px 5%}.hero{min-height:850px}.hero-art{height:360px}.skull-wrap{width:290px}h1{font-size:40px;letter-spacing:-2px}.identity,.members{grid-template-columns:1fr}.toolbar{flex-direction:column;align-items:stretch}.search{width:100%}.leader{height:470px}}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">TPB<span>.A26</span></div>
+<ul>
+<li><a href="#home">HOME</a></li><li><a href="#identity">IDENTITY</a></li><li><a href="#leaders">PENGURUS</a></li><li><a href="#members">ANGGOTA</a></li>
+</ul>
+</nav>
+
+<header class="hero" id="home">
+<div class="hero-copy">
+<div class="badge">AGRICULTURAL ENGINEERING • CLASS A26</div>
+<h1>ENGINEER<br><span class="g">THE</span> <span class="o">FUTURE.</span></h1>
+<p>Website digital keluarga besar <b>Teknik Pertanian dan Biosistem Kelas A Angkatan 26</b>. Engineering, agriculture, teknologi, solidaritas, dan karakter MCR disatukan dalam satu identitas.</p>
+<div class="buttons"><a href="#leaders" class="btn primary">EXPLORE CLASS</a><a href="#members" class="btn secondary">46 MEMBERS</a></div>
+</div>
+<div class="hero-art" aria-hidden="true">
+<div class="skull-wrap"><div class="ring"></div><div class="fire"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="horn left"></div><div class="horn right"></div><div class="skull"><div class="eye left"></div><div class="eye right"></div><div class="nose"></div><div class="teeth"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
+</div>
+</header>
+
+<section id="identity">
+<div class="section-head reveal"><div class="eyebrow">CLASS IDENTITY</div><h2>WHO <span>WE ARE</span></h2><p>Satu kelas. Satu angkatan. Satu keluarga engineering untuk masa depan pertanian.</p></div>
+<div class="identity">
+<div class="info reveal"><div class="icon">⚙️</div><small>PROGRAM STUDI</small><h3>TPB</h3><p>Teknik Pertanian dan Biosistem</p></div>
+<div class="info reveal"><div class="icon">🌾</div><small>CLASS</small><h3>CLASS A</h3><p>Agricultural Engineering</p></div>
+<div class="info reveal"><div class="icon">☠️</div><small>GENERATION</small><h3>ANGKATAN 26</h3><p>The next generation</p></div>
+<div class="info reveal"><div class="icon">🔥</div><small>CLASS SIZE</small><h3>46 PEOPLE</h3><p>One engineering family</p></div>
+</div>
+</section>
+
+<section id="leaders">
+<div class="section-head reveal"><div class="eyebrow">CLASS COMMAND</div><h2>THE <span>CORE TEAM</span></h2><p>Masukkan foto pengurus menggunakan tombol + pada setiap kartu.</p></div>
+<div class="leaders">
+<div class="leader reveal"><div class="leader-photo" id="komting"><label class="upload" title="Tambah foto">+<input type="file" accept="image/*" hidden data-target="komting"></label></div><div class="leader-info"><div class="role">CLASS COORDINATOR</div><h3>NAMA KOMTING</h3><p>Komandan Kelas • A26</p></div></div>
+<div class="leader reveal"><div class="leader-photo" id="sekretaris"><label class="upload" title="Tambah foto">+<input type="file" accept="image/*" hidden data-target="sekretaris"></label></div><div class="leader-info"><div class="role">SECRETARY</div><h3>NAMA SEKRETARIS</h3><p>Administrasi Kelas • A26</p></div></div>
+<div class="leader reveal"><div class="leader-photo" id="bendahara"><label class="upload" title="Tambah foto">+<input type="file" accept="image/*" hidden data-target="bendahara"></label></div><div class="leader-info"><div class="role">TREASURER</div><h3>NAMA BENDAHARA</h3><p>Financial Management • A26</p></div></div>
+</div>
+</section>
+
+<section id="members">
+<div class="section-head reveal"><div class="eyebrow">THE SQUAD</div><h2>MEET <span>THE 46</span></h2><p>Daftar anggota kelas A26 dan golongan darah sesuai data yang kamu berikan.</p></div>
+<div class="toolbar"><input id="search" class="search" placeholder="Cari nama anggota..."><div class="count" id="count">46 MEMBERS</div></div>
+<div class="members" id="members"></div>
+</section>
+
+<footer><strong>TPB<span>.A26</span></strong><p>Agricultural Engineering isn't just about machines. It's about creating solutions for the future of agriculture.</p><div class="copy">© 2026 TPB A26 — CLASS A</div></footer>
+
+<script>
+document.documentElement.classList.add("js");
+
+const data=[
+["Naisya Allika","B"],["Rama Michael Panjaitan","B+"],["Farel","A"],["Della Cahyani Gulo","O"],["Alwi al hafsi","B"],["Ferdinand Sijabat","B"],["Mutiara Salsabila","O"],["Elviana Panjaitan","B"],["Otniel Sihombing","O"],["M. Raihan Ramzi","O"],["Mukhlis El Sany Dalil Sari","O"],["Fachri Khairul Azmi","A"],["Andra Arjuna Afrianto","O"],["Khalilah Dira Ibrahim","B"],["Irma Rahayu Pakpahan","O"],["Ennia Krisandiana Solin","O"],["Habi Fadilah","B"],["Joshua Maldino Sihombing","O"],["Carrent Purba","O"],["M. Faiz Sirait","O"],["Patrisio Silitonga","O"],["M. Aldiansyahreza","AB"],["Dimas Prayoga","O"],["M. Nabil","O"],["Elsa Khirania Ramadhani","B"],["Hebron Gultom","O"],["Rado Sipahutar","AB"],["Fella Ashari","O"],["Sutan Fadiansyah","A+"],["M. Ziaul Kautsar","O"],["Azzahra Husna","O"],["Selinata Viktoria Simbolon","O"],["Ville Ribretin Milala","O"],["Abdullah Yusup","O"],["Vaniel Sitepu","A"],["Rameyza","O"],["Rendi Ghoffar","A+"],["Audrey Phasu","B"],["Adriel B. Simatupang","A"],["Natanael Reinado Nababan","A"],["Christa Riyanti","A"],["Sharon Hitler Manik","O"],["Almira Devina","A"],["Batara Sitindaon","O"],["NAMA ANGGOTA 45","-"],["NAMA ANGGOTA 46","-"]
+];
+
+// simpan foto per index supaya tidak hilang saat pencarian me-render ulang kartu
+const photos={};
+const box=document.getElementById("members");
+
+function render(list){
+  box.innerHTML="";
+  if(!list.length){
+    box.innerHTML='<div class="empty">Nama tidak ditemukan. Coba kata kunci lain.</div>';
+    document.getElementById("count").textContent="0 MEMBERS";
+    return;
+  }
+  list.forEach(item=>{
+    const index=item.i, no=String(index+1).padStart(2,"0");
+    const card=document.createElement("div");
+    card.className="member reveal";
+    card.innerHTML='<div class="member-photo" id="member-'+index+'">'+
+      (photos[index]?'<img src="'+photos[index]+'" alt="">':'')+
+      '<label class="upload" title="Tambah foto">+<input type="file" accept="image/*" hidden data-target="member-'+index+'"></label></div>'+
+      '<div class="member-info"><div class="num">MEMBER '+no+' • BLOOD '+item.blood+'</div><h4>'+item.name+'</h4>'+
+      '<span>TEKNIK PERTANIAN &amp; BIOSISTEM</span></div>';
+    box.appendChild(card);
+  });
+  document.getElementById("count").textContent=list.length+" MEMBERS";
+  observe();
+}
+
+const all=data.map((x,i)=>({name:x[0],blood:x[1],i:i}));
+
+// satu handler untuk semua input file (lebih aman daripada onchange inline)
+document.addEventListener("change",function(e){
+  const input=e.target;
+  if(!input.matches('input[type="file"][data-target]'))return;
+  const file=input.files&&input.files[0];
+  if(!file)return;
+  const reader=new FileReader();
+  reader.onload=function(ev){
+    const target=document.getElementById(input.dataset.target);
+    if(!target)return;
+    let img=target.querySelector("img");
+    if(!img){img=document.createElement("img");img.alt="";target.appendChild(img)}
+    img.src=ev.target.result;
+    const m=input.dataset.target.match(/^member-(\d+)$/);
+    if(m)photos[m[1]]=ev.target.result;
+  };
+  reader.readAsDataURL(file);
+});
+
+document.getElementById("search").addEventListener("input",function(){
+  const q=this.value.toLowerCase().trim();
+  render(all.filter(x=>x.name.toLowerCase().includes(q)));
+});
+
+let obs;
+function observe(){
+  const items=document.querySelectorAll(".reveal");
+  if(!("IntersectionObserver" in window)){
+    items.forEach(e=>e.classList.add("show"));
+    return;
+  }
+  if(obs)obs.disconnect();
+  obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add("show")});
+  },{threshold:0,rootMargin:"0px 0px -5% 0px"});
+  items.forEach(e=>obs.observe(e));
+  // jaring pengaman: kalau observer tidak jalan (preview di iframe), tetap tampilkan
+  setTimeout(function(){document.querySelectorAll(".reveal:not(.show)").forEach(e=>e.classList.add("show"))},1500);
+}
+
+render(all);
+observe();
+</script>
+</body>
+</html>
